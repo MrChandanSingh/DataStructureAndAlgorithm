@@ -28,5 +28,18 @@ namespace BasicConcept
                 alpha[ch-'a'] = true;
             }
         }
+
+        public void CheckStringsAreRotation(string input1, string input2)
+        {
+            if(input1.Length== input2.Length &&
+                (input1+input2).IndexOf(input1)!=-1)
+            {
+                Console.WriteLine("Strings are rotation of each other.");
+            }
+            else
+            {
+                Console.WriteLine("Strings are not rotation of each other.");
+            }
+        }
     }
 }

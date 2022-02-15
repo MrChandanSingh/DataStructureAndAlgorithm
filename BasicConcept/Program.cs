@@ -7,7 +7,7 @@ namespace BasicConcept
         static void Main(string[] args)
         {
             NumberProblem problem = new NumberProblem();
-            problem.HasEqualBlockFrequency(5);
+            problem.SumExactly2Bits(10);
             Console.ReadLine();
         }
 

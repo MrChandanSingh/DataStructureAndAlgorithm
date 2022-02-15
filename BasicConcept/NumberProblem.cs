@@ -30,5 +30,22 @@ namespace BasicConcept
             else
                 Console.WriteLine("No");
         }
+
+
+        public void SumExactly2Bits(int number)
+        {
+            int sum = 0;
+            for (int i = 1;1<<i<number;i++)
+            {
+                for(int j=0;j<i;j++)
+                {
+                    int num = (1 << i) + (1 << j);
+                    if (num < number)
+                        sum += sum + number;
+                }
+            }
+
+            Console.WriteLine(sum);
+        }
     }
 }
