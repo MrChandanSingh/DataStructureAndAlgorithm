@@ -6,8 +6,8 @@ namespace BasicConcept
     {
         static void Main(string[] args)
         {
-            NumberProblem problem = new NumberProblem();
-            problem.SumExactly2Bits(10);
+            BitSetProblem problem = new BitSetProblem();
+            problem.CountBits(13);
             Console.ReadLine();
         }
 
