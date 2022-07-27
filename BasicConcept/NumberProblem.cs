@@ -47,5 +47,11 @@ namespace BasicConcept
 
             Console.WriteLine(sum);
         }
+
+        public void CheckTwoNumbersAreOppsiteSign(int n1, int n2)
+        {
+            var isSame = (n1 ^ n2) < 0;
+            Console.WriteLine($"The given two numbers {n1} & {n2} are same sign: {isSame}");
+        }
     }
 }

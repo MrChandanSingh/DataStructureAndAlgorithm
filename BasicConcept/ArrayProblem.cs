@@ -35,5 +35,31 @@ namespace BasicConcept
                 }
             }
         }
+
+        public void HourGlass(int [,] mat)
+        {
+            if (mat == null)
+                return;
+
+            int r = 3;
+            int c = 3;
+
+            int max_sum = int.MaxValue;
+
+            for(int i= 0; i < r-2; i++)
+            {
+                for(int j=0; j < c-2; j++)
+                {
+                    int sum = (mat[i, j] + mat[i, j + 1] + mat[i, j + 2]) + (mat[i + 1, j + 1]) +
+                        (mat[i + 2, j] + mat[i + 2, j + 1] + mat[i + 2, j + 2]);
+                    if (sum > max_sum)
+                    {
+                        max_sum = sum;
+                    }
+                }
+            }
+
+            Console.WriteLine(max_sum);
+        }
     }
 }

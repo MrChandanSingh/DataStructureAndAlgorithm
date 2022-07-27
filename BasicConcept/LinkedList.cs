@@ -4,6 +4,7 @@ using System.Text;
 
 namespace BasicConcept
 {
+
     public class Node
     {
         public Node next;

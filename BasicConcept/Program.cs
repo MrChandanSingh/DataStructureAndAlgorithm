@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text.RegularExpressions;
 
 namespace BasicConcept
 {
@@ -6,8 +7,11 @@ namespace BasicConcept
     {
         static void Main(string[] args)
         {
-            BitSetProblem problem = new BitSetProblem();
-            problem.CountBits(13);
+            var arr = new int[] { -8, -3, -6, -2, -5, -4 };
+            var sumArray = new KadanesAlgorithm();
+            var result = sumArray.ExecuteKadaneAlgorith(arr);
+
+            Console.WriteLine(result);
             Console.ReadLine();
         }
 
@@ -46,6 +50,23 @@ namespace BasicConcept
                 }
             }
             return opens == 0;
+        }
+    }
+
+
+    public class BaseClass
+    {
+        public void Print()
+        {
+            Console.WriteLine("Base");
+        }
+    }
+
+    public class DerivedClass: BaseClass
+    {
+        public void Print()
+        {
+            Console.WriteLine("Derived...");
         }
     }
 }
