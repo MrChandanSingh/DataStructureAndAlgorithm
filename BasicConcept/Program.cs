@@ -1,5 +1,7 @@
-﻿using System;
+﻿using BasicConcept.LeetCode75Days;
+using System;
 using System.Text.RegularExpressions;
+
 
 namespace BasicConcept
 {
@@ -7,11 +9,18 @@ namespace BasicConcept
     {
         static void Main(string[] args)
         {
-            var arr = new int[] { -8, -3, -6, -2, -5, -4 };
-            var sumArray = new KadanesAlgorithm();
-            var result = sumArray.ExecuteKadaneAlgorith(arr);
 
-            Console.WriteLine(result);
+            Day2 day2 = new Day2();
+            //Console.WriteLine(day2.IsIsoMorphic("aab", "xyz"));
+            //Console.WriteLine(day2.IsIsoMorphic("aab", "xxy"));
+            //Console.WriteLine(day2.IsIsoMorphic("foo", "xyz"));
+            //Console.WriteLine(day2.IsIsoMorphic("badc", "baba"));
+            Console.WriteLine(day2.IsSubsequence("ab", "baab"));
+            Console.WriteLine(day2.IsSubsequence("abc", "axybmnc"));
+            Console.WriteLine(day2.IsSubsequence("aec", "abcde"));
+
+
+
             Console.ReadLine();
         }
 

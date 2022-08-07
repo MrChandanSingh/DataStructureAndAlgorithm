@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Elasticsearch.Net;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -7,16 +8,19 @@ namespace BasicConcept
 
     public class Node
     {
-        public Node next;
-        public Node tail; 
-        public int _data;
+        public Node Next { get; set; }
+        public int _data { get; }
 
         public Node(int data)
         {
             _data = data;
-            next = null;
+            Next = null;
         }
+
+        
     }
+
+
     public class DoubleLinkedList
     {
         internal DoubleNode head;
@@ -104,5 +108,87 @@ namespace BasicConcept
         internal int data;
 
         
+    }
+
+    public class LinkedListProbelmSet
+    {
+
+        public Node GetSumOfTwoLinkedListsIntoNewLinkedList(Node node1,Node node2)
+        {
+            Node outputNode = null;
+            bool carry = false;
+            int sum = 0;
+            while(node1 != null || node2!=null)
+            {
+               if(node1!=null)
+                {
+                    sum += node1._data;
+                }
+               if(node2!=null)
+                {
+                    sum += node2._data;
+                }
+
+               if(carry)
+                {
+                    sum += 1;
+                    carry = false;
+                }
+               if(sum >=10)
+                {
+                    sum -= sum;
+                    carry = true;
+                }
+
+               if(outputNode == null)
+                {
+                    outputNode = new Node(sum);
+                }
+               else
+                {
+                    var temp = outputNode;
+                    while(temp.Next != null)
+                    {
+                        temp = temp.Next;
+                    }
+                    temp.Next = new Node(sum);
+                }
+
+               node1 = node1!=null ? node1.Next : null;
+               node2 = node2!=null ? node2.Next : null;
+            }
+
+
+
+            return outputNode;
+        }
+    }
+
+
+    public class SingleLinkedListNode<T>
+    {
+        
+        private SingleLinkedListNode<T>? Head { get; set; }
+
+        //public SingleLinkedListNode<T> AddFirst(T data)
+        //{
+        //    var newListElement = new SingleLinkedListNode<T>
+        //    {
+        //        Head =
+        //    }
+        //}
+    }
+
+    public class SinglyLinkedListNode<T>
+    {
+        public SinglyLinkedListNode(T data)
+        {
+            Data = data;
+            Next = null;
+        }
+
+        public T Data { get; }
+
+        public SinglyLinkedListNode<T>? Next { get; set; }
     }
 }
