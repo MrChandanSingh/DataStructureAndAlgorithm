@@ -10,16 +10,10 @@ namespace BasicConcept
         static void Main(string[] args)
         {
 
-            Day2 day2 = new Day2();
-            //Console.WriteLine(day2.IsIsoMorphic("aab", "xyz"));
-            //Console.WriteLine(day2.IsIsoMorphic("aab", "xxy"));
-            //Console.WriteLine(day2.IsIsoMorphic("foo", "xyz"));
-            //Console.WriteLine(day2.IsIsoMorphic("badc", "baba"));
-            Console.WriteLine(day2.IsSubsequence("ab", "baab"));
-            Console.WriteLine(day2.IsSubsequence("abc", "axybmnc"));
-            Console.WriteLine(day2.IsSubsequence("aec", "abcde"));
-
-
+            Day5 day5 = new Day5();
+            var result =day5.GetLongestPalindrome("abccccdd");
+            Console.WriteLine(result);
+            //Console.WriteLine(day4.DetectCycle(listNode2));
 
             Console.ReadLine();
         }
