@@ -1,7 +1,9 @@
 ﻿using BasicConcept.LeetCode75Days;
 using BasicConcept.OopsConcept;
 using System;
+using System.Collections.Generic;
 using System.Text.RegularExpressions;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace BasicConcept
@@ -10,9 +12,18 @@ namespace BasicConcept
     {
         static async Task Main(string[] args)
         {
+            Day11 day11 = new Day11();
+            var alice = new List<int>()
+            {
+                5,6,7
+            };
+            var bob = new List<int>()
+            {
+                3,6,10
+            };
 
-            Day9 day9 = new Day9();
-            day9.CheckNumberIsPalindrome();
+            var result =day11.compareTriplets(alice, bob);
+            result.ForEach(x=> Console.WriteLine(x));
             Console.ReadLine();
         }
 
@@ -66,7 +77,7 @@ namespace BasicConcept
             return opens == 0;
         }
 
-        static async Task<int> PP()
+        static async ValueTask<int> PP()
         {
             Console.WriteLine("PP Started");
             await Task.Delay(6000);
@@ -77,6 +88,11 @@ namespace BasicConcept
         {
             Console.WriteLine("PPW Started");
             Console.WriteLine("PPW Completed");
+        }
+
+        static void ChildMethodOfPP(int itout)
+        {
+            Console.WriteLine($"CHildOfPP {itout * 4}");
         }
     }
 
