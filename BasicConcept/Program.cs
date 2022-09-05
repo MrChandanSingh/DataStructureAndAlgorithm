@@ -12,18 +12,8 @@ namespace BasicConcept
     {
         static async Task Main(string[] args)
         {
-            Day11 day11 = new Day11();
-            var alice = new List<int>()
-            {
-                5,6,7
-            };
-            var bob = new List<int>()
-            {
-                3,6,10
-            };
-
-            var result =day11.compareTriplets(alice, bob);
-            result.ForEach(x=> Console.WriteLine(x));
+            Day15 day15 = new Day15();
+            day15.ValidIPAddress();
             Console.ReadLine();
         }
 

@@ -11,7 +11,7 @@ namespace BasicConcept
         public Node Next { get; set; }
         public int _data { get; }
 
-        public Node(int data)
+        public Node(int data, Node next=null)
         {
             _data = data;
             Next = null;
