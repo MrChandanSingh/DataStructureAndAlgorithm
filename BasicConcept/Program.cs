@@ -13,7 +13,7 @@ namespace BasicConcept
         static async Task Main(string[] args)
         {
             Day15 day15 = new Day15();
-            day15.ValidIPAddress();
+            Console.WriteLine(day15.ValidIPAddress());
             Console.ReadLine();
         }
 
