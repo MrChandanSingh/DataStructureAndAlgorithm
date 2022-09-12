@@ -1,20 +1,54 @@
-﻿using BasicConcept.LeetCode75Days;
-using BasicConcept.OopsConcept;
+﻿
+using BasicConcept.LeetCode75Days;
 using System;
-using System.Collections.Generic;
-using System.Text.RegularExpressions;
-using System.Threading;
 using System.Threading.Tasks;
 
 namespace BasicConcept
 {
+    public class RecursionTreeNode
+    {
+        public int val;
+        public RecursionTreeNode left;
+        public RecursionTreeNode right;
+        public RecursionTreeNode(int val = 0, RecursionTreeNode left = null, RecursionTreeNode right = null)
+        {
+            this.val = val;
+            this.left = left;
+            this.right = right;
+        }
+    }
     internal class Program
     {
         static async Task Main(string[] args)
         {
-            Day15 day15 = new Day15();
-            Console.WriteLine(day15.ValidIPAddress());
+
+            Day21 day = new Day21();
+            Console.WriteLine(day.generate(4));
+
+           
             Console.ReadLine();
+        }
+
+        //private static void Execute(IBirdBehaviour birdBehaviour)
+        //{
+        //    birdBehaviour.Eat();
+        //    birdBehaviour.Fly();
+        //}
+
+        public static RecursionTreeNode SearchNode(RecursionTreeNode root, int val)
+        {
+            if (root == null)
+                return null;
+            if (root.val == val)
+                return root;
+            if (root.val >val)
+                return SearchNode(root.left, val);
+            else
+            {
+               return SearchNode(root.right, val);
+            }
+
+            return root;
         }
 
         private static async Task DoSomething1(Task res)
@@ -78,6 +112,12 @@ namespace BasicConcept
         {
             Console.WriteLine("PPW Started");
             Console.WriteLine("PPW Completed");
+        }
+
+        static async ValueTask<int> ANotherAsync()
+        {
+            await Task.Delay(6790);
+            return 20;
         }
 
         static void ChildMethodOfPP(int itout)

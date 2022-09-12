@@ -7,7 +7,7 @@ namespace BasicConcept.OopsConcept
     public abstract class AbstractConcepts
     {
         // This method is going to be mandatorly implemented in derived class..
-        public abstract string GetConnection();
+        protected abstract string GetConnection();
 
         // this virtual method can be override in derived class with override key word...
         // It is not mandatory to be implemented in derieved class. it is totally optional.
@@ -27,16 +27,26 @@ namespace BasicConcept.OopsConcept
 
     public class DerivedClass : AbstractConcepts
     {
-        public override string GetConnection()
+        //public override string GetConnection()
+        //{
+        //    Console.WriteLine("Derived class: override virtual function GetConnection.");
+        //    return string.Empty;
+        //}
+
+        public DerivedClass()
         {
-            Console.WriteLine("Derived class: override virtual function GetConnection.");
-            return string.Empty;
+            //this.;
         }
 
         public override string GetVirtualConnection()
         {
             Console.WriteLine("Derived class: override virtual function GetVirtualConnection.");
             return string.Empty;
+        }
+
+        protected override string GetConnection()
+        {
+            throw new NotImplementedException();
         }
     }
 }
