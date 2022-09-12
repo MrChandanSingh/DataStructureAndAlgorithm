@@ -25,12 +25,12 @@ namespace BasicConcept.LeetCode75Days
             return result;
         }
 
-        public List<List<int>> generate(int numRows)
+        public List<int> generate(int rowIndex)
         {
-            List<List<int>> result = new List<List<int>>();
-            int[,] rows = new int[numRows,numRows];
-            Console.WriteLine(rows[numRows-1,numRows-1]);
-            for (int i = 0; i < numRows; i++)
+            List<int> result = new List<int>();
+            int[,] rows = new int[rowIndex, rowIndex];
+            Console.WriteLine(rows[rowIndex - 1, rowIndex - 1]);
+            for (int i = 0; i < rowIndex; i++)
             {
                 
                 for(int j=0;j<=i;j++)
@@ -43,15 +43,14 @@ namespace BasicConcept.LeetCode75Days
 
                
             }
-            for(int i=0;i<numRows;i++)
-            {
-                var row = new List<int>();
-                for(int j=0;j<=i;j++)
+           
+                
+                for(int j=0;j<= rowIndex - 1;j++)
                 {
-                    row.Add(rows[i,j]);
+                    result.Add(rows[rowIndex - 1, j]);
                 }
-                result.Add(new List<int>(row));
-            }
+
+
 
             return result;
             
