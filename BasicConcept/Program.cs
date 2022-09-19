@@ -22,10 +22,13 @@ namespace BasicConcept
         static async Task Main(string[] args)
         {
 
-            Day21 day = new Day21();
-            Console.WriteLine(day.generate(4));
 
-           
+            Day24 day24 = new Day24();
+            var result = day24.KthGrammar(2, 1);
+            Console.WriteLine(result);
+
+
+
             Console.ReadLine();
         }
 
