@@ -23,8 +23,8 @@ namespace BasicConcept
         {
 
 
-            Day24 day24 = new Day24();
-            var result = day24.KthGrammar(2, 1);
+            Day27 day = new Day27();
+             var result =day.GenerateTrees(3);
             Console.WriteLine(result);
 
 
