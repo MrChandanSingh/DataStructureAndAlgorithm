@@ -23,9 +23,10 @@ namespace BasicConcept
         {
 
 
-            Day27 day = new Day27();
-             var result =day.GenerateTrees(3);
-            Console.WriteLine(result);
+            
+            Day32 day32 = new Day32();
+            day32.LengthOfLongestSubstring(" ");
+            Console.WriteLine();
 
 
 
