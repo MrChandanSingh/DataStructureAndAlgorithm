@@ -7,19 +7,7 @@ namespace BasicConcept.LeetCode75Days
     public class Day33
     {
         public bool HasCycle(ListNode head)
-        {
-            //HashSet<int> cycle = new HashSet<int>();
-            //if(head == null) return false;
-            //while (head != null)
-            //{
-            //    if (cycle.Contains(head.val))
-            //        return true;
-            //    cycle.Add(head.val);
-            //    head = head.next;
-            //}
-            //return false;
-
-
+        {           
             if (head == null)
             {
                 return false;
@@ -45,7 +33,6 @@ namespace BasicConcept.LeetCode75Days
             return false;
         }
 
-        // Linked list cycle detection II..
         public ListNode DetectCycle(ListNode head)
         {
             Dictionary<ListNode, int> map = new Dictionary<ListNode, int>();
