@@ -24,8 +24,8 @@ namespace BasicConcept
 
 
             
-            Day32 day32 = new Day32();
-            day32.LengthOfLongestSubstring(" ");
+            Day35 day35 = new Day35();
+            day35.CheckIfPangram("chandan");
             Console.WriteLine();
 
 
@@ -33,11 +33,7 @@ namespace BasicConcept
             Console.ReadLine();
         }
 
-        //private static void Execute(IBirdBehaviour birdBehaviour)
-        //{
-        //    birdBehaviour.Eat();
-        //    birdBehaviour.Fly();
-        //}
+       
 
         public static RecursionTreeNode SearchNode(RecursionTreeNode root, int val)
         {
